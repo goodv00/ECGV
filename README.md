@@ -1,4 +1,4 @@
-# CSV-Viewer-App
+# ECG Viewer for Polar H10 - View and Annotate ECG Data from Single-Lead ECG
 
 
 **Version:** 1.0.0  
