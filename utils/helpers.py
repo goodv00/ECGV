@@ -57,12 +57,12 @@ def get_default_annotations(file_path: str | None = None) -> dict:
     :return:
     """
     if file_path is None:
-        current_path = os.getcwd()
-        if current_path.split('\\')[-1] in ['utils', 'modules', 'screens', 'analysis', 'misc']:
+        current_path = os.getcwd().replace('\\', '/')
+        if current_path.split('/')[-1] in ['utils', 'modules', 'screens', 'analysis', 'misc']:
             parent_path = os.path.dirname(current_path)
         else:
             parent_path = current_path
-        file_path = parent_path + '\\analysis\\default_annotations.json'
+        file_path = parent_path + '/analysis/default_annotations.json'
     with open(file_path, 'r') as f:
         return json.load(f)
 

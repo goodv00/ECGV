@@ -155,6 +155,7 @@ class ThemedCheckbutton(Checkbutton):
             'indicator': 0,
             'cursor': 'hand2',
             'background': MASTER_COLORS['bg'],
+            'fg': 'black',
             'selectcolor': MASTER_COLORS['selectbg'],
         }
         for key in self.style.keys():

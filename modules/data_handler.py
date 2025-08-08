@@ -369,7 +369,7 @@ class DataHandler:
         :return:
         """
         self.reset()
-        self.data_path = filepath.replace(r'\\'[0], r'/')
+        self.data_path = filepath.replace('\\', '/')
         # In case this code is used stand-alone, the selected label variable will not be used
         if self.in_app:
             self.selected_label = 'Default'
@@ -395,11 +395,12 @@ class DataHandler:
                                           filetypes=[("CSV files", "*.csv*"),
                                                      ("Text files", "*.txt")],
                                           initialdir=default_dir)
+        path = path.replace('\\', '/')
         if path == '':  # Handles the case that the user closes the window
             # Throw an error box
             raise ValueError('No file was selected')
         self.reset()
-        self.data_path = path.replace(r'\\'[0], r'/')
+        self.data_path = path
         if self.in_app:  # In case this code is used stand-alone, the selected label variable will not be used
             self.selected_label = 'Default'
         self.filename = ''.join(self.data_path.split('/')[-1].split('.')[0:-1])
