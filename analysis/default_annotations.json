@@ -1,0 +1,23 @@
+{
+  "heartbeat_classes":
+    {
+      "N": "Normal beats",
+      "S": "Supraventricular ectopic beats",
+      "V": "Ventricular ectopic beats",
+      "F": "Fusion beats",
+      "Q" : "Unknown / unclassifiable / noisy beats"
+    },
+  "segment_denominators":
+    {
+      "~": "Beginning of noisy segment"
+    },
+  "standard_colors":
+    {
+      "N": "limegreen",
+      "S": "royalblue",
+      "V": "darkorange",
+      "F": "khaki",
+      "Q" : "indianred",
+      "~" : "lightpink"
+    }
+}
