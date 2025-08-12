@@ -1,4 +1,4 @@
-# ECG Viewer for Polar H10 - View and Annotate ECG Data from Single-Lead ECG
+# ECG Viewer for Polar H10 - View and Annotate Data from Single-Lead ECG
 
 
 **Version:** 1.0.0  
@@ -8,9 +8,10 @@
 
 ![Screenshot of the ECG Viewer App](assets/Screenshot_ECGV.png)
 
-This is a simple GUI that allows a user to open CSV file, plot one of its columns and mark points in on the plotted line.
+This is a simple GUI that allows a user to open a CSV file, plot one of its columns and mark points in on the plotted line.
 
 It was designed to view ECG recordings made with Polar Sensor Logger (https://play.google.com/store/apps/details?id=com.j_ware.polarsensorlogger&hl=en-US).
+You can try to run any kind of single-channel time-series data with it, as long as it comes in a CSV-style format.
 
 ---
 

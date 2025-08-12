@@ -46,6 +46,7 @@ def legend_without_duplicate_labels(ax: Axes) -> None:
     """
     Display matplotlib legend without duplicates.
     Line plots appear first, scatter plots last.
+    This function was created with ChatGPT
     :param ax: The matplotlib axes object which shall feature the legend
     """
     handles, labels = ax.get_legend_handles_labels()
@@ -162,6 +163,17 @@ class GraphHandler:
     GraphHandler class takes care of in-app matplotlib graph. It creates a matplotlib figure within a tkinter widget
     and offers several methods for dynamic and interactive graphs. It is possible to use a single axis, subplots or even
     GridSpec (for more information check Matplotlib documentation).
+
+    At its core are dictionaries that take care of the elements within each axis.
+    Since we want a dynamic plot that is responsive, adding and deleting new graph elements should be done using these methods.
+
+    The current version supports creating:
+    - Line plots (matplotlib.pyplot.plot)
+    - Scatter plots (matplotlib.pyplot.scatter)
+    - Vlines (matplotlib.pyplot.vlines)
+    - Hlines (matplotlib.pyplot.hlines)
+    - Boxes (matplotlib.patches.Rectangle)
+    - Text (matplotlib.pyplot.text)
     """
 
     def __init__(self, container: PanedWindow | Tk | LabelFrame | Frame, **kwargs):
