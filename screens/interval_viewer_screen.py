@@ -133,8 +133,9 @@ class IntervalScreen(TwoPanelTemplate):
             'Take Screenshot': self.graph_handler.take_screenshot,
             'Backward': lambda: self.graph_handler.move_backward(),
             'Forward': lambda: self.graph_handler.move_forward(),
-            'Zoom out': lambda: self.graph_handler.show_x_window(self.data_handler['Index'][0],
-                                                                 self.data_handler['Index'][-1]),
+            'Zoom out': lambda: self.graph_handler.show_x_window(
+                self.data_handler[self.data_handler.x_axis_header].loc[0],
+                self.data_handler[self.data_handler.x_axis_header].loc[len(self.data_handler) - 1]),
         }
 
         # Required so the buttons scale with the panel after resizing
